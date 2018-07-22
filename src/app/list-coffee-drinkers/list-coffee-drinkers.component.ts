@@ -6,7 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./list-coffee-drinkers.component.css']
 })
 export class ListCoffeeDrinkersComponent implements OnInit {
-
+  coffeeDrinkers=[
+    { name: 'Rich' },
+    { name: 'Eric' },
+    { name: 'Evash' },
+  ];
   constructor() { }
 
   ngOnInit() {

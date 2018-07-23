@@ -12,15 +12,16 @@ import { IntraComponentMessageServiceService } from '../intra-component-message-
 })
 export class ListCoffeeDrinkersComponent implements OnInit, OnDestroy {
   coffeeDrinkers: Drinker[];
-  message: any;
+  drinker: Drinker;
   subscription: Subscription;
 
   constructor(private coffeeDrinkersService: CoffeeDrinkersService,
     private intraMessages: IntraComponentMessageServiceService) { 
-      this.subscription =  intraMessages.getMessage().subscribe(message => { 
-        this.message = message;
-        console.log(this.message);
-        this.getDrinkers(); // Since only message is for new drinker 
+      this.subscription =  intraMessages.getMessage().subscribe(drinker => { 
+        this.drinker = drinker.drinker;
+        console.log(this.drinker);
+        this.coffeeDrinkers.push(this.drinker);
+        // Why!? this.getDrinkers(); // Since only message is for new drinker 
       });
     }
 

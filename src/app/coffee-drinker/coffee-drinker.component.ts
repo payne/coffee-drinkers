@@ -24,8 +24,9 @@ export class CoffeeDrinkerComponent implements OnInit {
     const name  = this.name.value;
     const contributions=5.0;
     console.log(`name updated to ${name}`);
-    this.drinkersService.addDrinker( {name, contributions } as Drinker);
-    this.intraMessages.sendMessage("Dude, there is a new drinker.");  // ha ha ha :-) 
+    const newDrinker = {name, contributions } as Drinker;
+    this.drinkersService.addDrinker( newDrinker );
+    this.intraMessages.sendMessage(newDrinker); // ugly!?!
   }
 
 }

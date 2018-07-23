@@ -19,6 +19,8 @@ export class CoffeeDrinkersService {
   }
 
   addDrinker(drinker: Drinker): Observable<Drinker> {
+    console.log('coffee-drinkers.service.addDrinker:');
+    console.log(JSON.stringify(drinker));
     return this.http.post<Drinker>(this.drinkersUrl, drinker, httpOptions);
   }
 

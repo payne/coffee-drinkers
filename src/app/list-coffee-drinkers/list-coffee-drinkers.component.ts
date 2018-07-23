@@ -14,7 +14,7 @@ export class ListCoffeeDrinkersComponent implements OnInit, OnDestroy {
   coffeeDrinkers: Drinker[];
   drinker: Drinker;
   subscription: Subscription;
-  columns = [ { prop: 'name' }, { name: 'contributions'} ];
+  columns = [ { prop: 'name' }, { prop: 'contributions'} ];
 
   constructor(private coffeeDrinkersService: CoffeeDrinkersService,
     private intraMessages: IntraComponentMessageServiceService) { 
@@ -24,7 +24,7 @@ export class ListCoffeeDrinkersComponent implements OnInit, OnDestroy {
         this.coffeeDrinkers.push(this.drinker);
         // https://github.com/swimlane/ngx-datatable/issues/934
         this.coffeeDrinkers = [...this.coffeeDrinkers];
-        // Why!? this.getDrinkers(); // Since only message is for new drinker 
+        // Doesn't work -- Why!? this.getDrinkers(); // Since only message is for new drinker 
       });
     }
 

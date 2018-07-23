@@ -9,6 +9,15 @@
    <ngx-datatable
        [rows]="coffeeDrinkers"
        [columns]="columns">
+       <!-- Failed to get notes from 
+        https://github.com/swimlane/ngx-datatable/issues/401
+        to work... 
+       <ngx-datatable-column prop="contributions">
+         <ng-template let-value="contributions" ngx-datatable-cell-template>
+           {{ contributions | currency }}
+         </ng-template>
+       </ngx-datatable-column>
+       -->
     </ngx-datatable>
 </div>
 

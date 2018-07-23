@@ -5,6 +5,7 @@ import { HttpClientModule }    from '@angular/common/http';
 
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDrinkerDataServiceService }  from './in-memory-drinker-data-service.service';
+import { IntraComponentMessageServiceService } from './intra-component-message-service.service';
 
 import { AppComponent } from './app.component';
 import { CoffeeDrinkerComponent } from './coffee-drinker/coffee-drinker.component';
@@ -29,7 +30,7 @@ import { CoffeeDrinkersService } from './coffee-drinkers.service';
       InMemoryDrinkerDataServiceService, { dataEncapsulation: false }
     )
   ],
-  providers: [CoffeeDrinkersService, InMemoryDrinkerDataServiceService],
+  providers: [CoffeeDrinkersService, InMemoryDrinkerDataServiceService, IntraComponentMessageServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

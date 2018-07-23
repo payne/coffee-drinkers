@@ -1,5 +1,7 @@
 # CoffeeDrinkers
 
+Small hello world type app to go with a quick hello Angular Tutorial https://docs.google.com/presentation/d/1YRJNiEt8vsNFCkf8jT5g0V-ewY7xatPq0Vg2pELgvf4/edit?usp=sharing
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.6.
 
 ## Development server

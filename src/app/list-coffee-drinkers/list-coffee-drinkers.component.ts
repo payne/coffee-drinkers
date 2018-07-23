@@ -14,6 +14,7 @@ export class ListCoffeeDrinkersComponent implements OnInit, OnDestroy {
   coffeeDrinkers: Drinker[];
   drinker: Drinker;
   subscription: Subscription;
+  columns = [ { prop: 'name' }, { name: 'contributions'} ];
 
   constructor(private coffeeDrinkersService: CoffeeDrinkersService,
     private intraMessages: IntraComponentMessageServiceService) { 

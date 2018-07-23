@@ -5,4 +5,11 @@
   <li *ngFor='let drinker of coffeeDrinkers'>{{drinker.name}}</li>
 </ul>
 
+<div>
+   <ngx-datatable
+       [rows]="coffeeDrinkers"
+       [columns]="columns">
+    </ngx-datatable>
+</div>
+
 <button (click)="getDrinkers()">getDrinkers()</button>

@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule }    from '@angular/common/http';
+import { NgxDatatableModule } from '@swimlane/ngx-datatable';
 
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDrinkerDataServiceService }  from './in-memory-drinker-data-service.service';
@@ -22,6 +23,7 @@ import { CoffeeDrinkersService } from './coffee-drinkers.service';
   imports: [
     BrowserModule,
     ReactiveFormsModule,
+    NgxDatatableModule,
     HttpClientModule,
     // The HttpClientInMemoryWebApiModule module intercepts HTTP requests
     // and returns simulated server responses.
